@@ -599,7 +599,7 @@ PushAura_Button.BorderSizePixel = 0
 PushAura_Button.Position = UDim2.new(0, 210, 0, 25)
 PushAura_Button.Size = UDim2.new(0, 150, 0, 30)
 PushAura_Button.Font = Enum.Font.Oswald
-PushAura_Button.Text = "Tik: @r4y0hx"
+PushAura_Button.Text = "خو فەشارتن"
 PushAura_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 PushAura_Button.TextScaled = true
 PushAura_Button.TextSize = 14.000
@@ -2228,21 +2228,6 @@ end)
 --GAME SECTION BUTTONS
 
 
-PushAura_Button.MouseButton1Click:Connect(function()
-	ChangeToggleColor(PushAura_Button)
-	if PushAura_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		repeat
-			task.wait(0.3)
-			pcall(function()
-				for i,v in pairs(Players:GetPlayers()) do
-					if (v ~= plr) and (not table.find(ScriptWhitelist,v.UserId)) and (not table.find(ForceWhitelist,v.UserId)) then
-						Push(v)
-					end
-				end
-			end)
-		until PushAura_Button.Ticket_Asset.ImageColor3 ~= Color3.fromRGB(0,255,0)
-	end
-end)
 
 AntiMinesFunction = nil
 SpamMines_Button.MouseButton1Click:Connect(function()
@@ -3330,6 +3315,9 @@ Night_Button.MouseButton1Click:Connect(function()
 	else
 		SendNotify("WOLF","Snap : r2y0h",10)
 	end
+end)
+PushAura_Button.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
 end)
 
 AntiRagdoll_Button.MouseButton1Click:Connect(function()
