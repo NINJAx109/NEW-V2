@@ -1125,7 +1125,7 @@ TargetImage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TargetImage.BorderColor3 = Color3.fromRGB(0, 255, 255)
 TargetImage.Position = UDim2.new(0, 25, 0, 25)
 TargetImage.Size = UDim2.new(0, 100, 0, 100)
-TargetImage.Image = "rbxassetid://3672293741"
+TargetImage.Image = "https://www.roblox.com/users/3672293741/profile"
 
 TargetName_Input.Name = "TargetName_Input"
 TargetName_Input.Parent = Target_Section
@@ -2159,7 +2159,7 @@ local function UpdateTarget(player)
 	else
 		TargetName_Input.Text = "@یوزەرێ وی/ێ..."
 		UserIDTargetLabel.Text = "ئایدی: \nناڤ: \nتاریخ: "
-		TargetImage.Image = "rbxassetid://3672293741"
+		TargetImage.Image = "https://www.roblox.com/users/3672293741/profile"
 		TargetedPlayer = nil
 		if FlingTarget_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 			FlingTarget_Button.Ticket_Asset.ImageColor3 = Color3.fromRGB(255,0,0)
