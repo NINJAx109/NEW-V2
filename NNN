@@ -674,7 +674,7 @@ VoidProtection_Button.BorderSizePixel = 0
 VoidProtection_Button.Position = UDim2.new(0, 25, 0, 175)
 VoidProtection_Button.Size = UDim2.new(0, 150, 0, 30)
 VoidProtection_Button.Font = Enum.Font.Oswald
-VoidProtection_Button.Text = "دیتنا priveiaty"
+VoidProtection_Button.Text = "snap: r2y0h"
 VoidProtection_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 VoidProtection_Button.TextScaled = true
 VoidProtection_Button.TextSize = 14.000
@@ -2227,21 +2227,7 @@ end)
 
 --GAME SECTION BUTTONS
 AntiRagdollFunction = nil
-AntiRagdoll_Button.MouseButton1Click:Connect(function()
-	ChangeToggleColor(AntiRagdoll_Button)
-	ToggleRagdoll(true)
-	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		AntiRagdollFunction = GetRoot(plr).ChildAdded:Connect(function(Force)
-			if Force.Name == "PushForce" then
-				Force.MaxForce = Vector3.new(0,0,0)
-				Force.Velocity = Vector3.new(0,0,0)
-			end
-		end)
-	else
-		ToggleRagdoll(false)
-		AntiRagdollFunction:Disconnect()
-	end
-end)
+
 
 PushAura_Button.MouseButton1Click:Connect(function()
 	ChangeToggleColor(PushAura_Button)
@@ -3347,6 +3333,10 @@ Night_Button.MouseButton1Click:Connect(function()
 	end
 end)
 
+AntiRagdoll_Button.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/bEDDkqUB'))()
+end)
+
 VoidProtection_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://pastebin.com/raw/iMgUE4st'))()
 end)
@@ -3427,10 +3417,6 @@ plr.CharacterAdded:Connect(function(x)
 	end
 	if PotionFling_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionFling_Button)
-		SendNotify("WOLF","Snap : r2y0h",5)
-	end
-	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		ChangeToggleColor(AntiRagdoll_Button)
 		SendNotify("WOLF","Snap : r2y0h",5)
 	end
 	if SpamMines_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
